@@ -11,3 +11,4 @@ Clone this repo into your `custom_nodes` directory.
 - **Flex Guidance**: Allows you to set the guidance for the Flex.1 guidance embedder, or bypass it completly to use true CFG.
 - **Flex LoRA Loader**: Loads LoRAs and automatically prunes them to Flex.1 layers. It will not be perfect as Flex is heavily diverged from Flux dev and is not a direct ancenstor of it, but it should be good enough for most purposes.
 - **Flex LoRA Loader (Model Only)**: Same as Flex LoRA Loader, but only loads the model and not the text encoder. Most Flux LoRAs do not train the text encoder.
+- **Flex2 Conditioner** A conditionaing node for controlling all of the [Flex.2-preview](https://huggingface.co/ostris/Flex.2-preview) conditioning for inpaint and universal controls. This node is currently required for [Flex.2-preview](https://huggingface.co/ostris/Flex.2-preview) inference. 

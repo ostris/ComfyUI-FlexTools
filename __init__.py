@@ -381,14 +381,17 @@ class Flex2Conditioner:
             device='cpu',
             dtype=torch.float32
         )
-
-        out_latent = {
-            "samples": torch.zeros(
-                (batch_size, 16, latent_height, latent_width),
-                device='cpu',
-                dtype=torch.float32
-            )
-        }
+        
+        if latent is not None:
+            out_latent = latent
+        else:
+            out_latent = {
+                "samples": torch.zeros(
+                    (batch_size, 16, latent_height, latent_width),
+                    device='cpu',
+                    dtype=torch.float32
+                )
+            }
 
         # inpaint
         if inpaint_image is not None:
